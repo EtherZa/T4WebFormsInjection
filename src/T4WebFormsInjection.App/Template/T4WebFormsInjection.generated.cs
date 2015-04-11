@@ -56,9 +56,10 @@ namespace T4WebFormsInjection.App.Pages
 
     public partial class WebForm1
     {
-        [Obsolete("Use T4WebFormsInjection.App.Pages.T4WebFormsInjection.App.Pages(dummyInterface) instead.")]
+        [Obsolete("Use T4WebFormsInjection.App.Pages.T4WebFormsInjection.App.Pages(dummyInterface, dummyInterfaceFromPartial) instead.")]
         public WebForm1()
-            : this(dummyInterface: T4WebFormsInjection.App.Code.Container.GetInstance<T4WebFormsInjection.App.Code.IDummyInterface>())
+            : this(dummyInterface: T4WebFormsInjection.App.Code.Container.GetInstance<T4WebFormsInjection.App.Code.IDummyInterface>(),
+                   dummyInterfaceFromPartial: T4WebFormsInjection.App.Code.Container.GetInstance<T4WebFormsInjection.App.Code.IDummyInterface>())
         {
         }
     }

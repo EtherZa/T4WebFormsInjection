@@ -81,7 +81,6 @@ namespace <#= kv.Key #>
 <# manager.Process(settings.SplitIntoMultipleFiles); #>
 
 <#+
-
     static TextTransformation TT;
     static Settings settings;
     static Model model;
@@ -153,22 +152,11 @@ namespace <#= kv.Key #>
             return ret;
         }
 
-        private void RecurseNamespace(List<string> filter, Dictionary<string, List<ClassDetails>> lookup, IEnumerable<EnvDTE.CodeNamespace> namespaces)
+        private void RecurseNamespace(List<string> filter, List<ClassDetails> classes, IEnumerable<EnvDTE.CodeNamespace> namespaces)
         {
             foreach(var ns in namespaces)
             {
-                List<ClassDetails> classes;
-                if (!lookup.ContainsKey(ns.FullName))
-                {
-                    classes = new List<ClassDetails>();
-                    lookup[ns.FullName] = classes;
-                }
-                else
-                {
-                    classes = new List<ClassDetails>();
-                }
-
-                this.RecurseNamespace(filter, lookup, ns.Members.OfType<EnvDTE.CodeNamespace>().Where(cn => filter.Any(x => x.StartsWith(cn.FullName))));
+                this.RecurseNamespace(filter, classes, ns.Members.OfType<EnvDTE.CodeNamespace>().Where(cn => filter.Any(x => x.StartsWith(cn.FullName))));
 
                 var items = ns.Members.OfType<EnvDTE80.CodeClass2>()
                     .Where(x => this.baseClass.Any(c => x.get_IsDerivedFrom(c)));
@@ -221,16 +209,22 @@ namespace <#= kv.Key #>
                 .OfType<EnvDTE.CodeNamespace>()
                 .Where(cn => namespaces.Any(x => x.StartsWith(cn.FullName)));
 
-            Dictionary<string, List<ClassDetails>> lookup = new Dictionary<string, List<ClassDetails>>();
-            
-            this.RecurseNamespace(namespaces, lookup, codeNamespaces);
+            var classes = new List<ClassDetails>();
 
-            var q = from a in lookup
-                    where a.Value.Any()
-                    orderby a.Key
-                    select a;
+            this.RecurseNamespace(namespaces, classes, codeNamespaces);
 
-            return q.ToDictionary(k => k.Key, v => v.Value.OrderBy(x => x.Name).ToArray());
+            var q = from n in classes
+		            group n by n.Namespace into g
+		            orderby g.Key
+		            select new {
+			            Namespace = g.Key,
+			            Classes = from i in g
+					              group i by i.Name into k
+					              orderby k.Key
+					              select k.OrderByDescending(x => x.Parameters.Count()).First()
+		            };
+
+            return q.ToDictionary(k => k.Namespace, v => v.Classes.ToArray());
         }
 
         public class ClassDetails
@@ -262,7 +256,7 @@ namespace <#= kv.Key #>
 
                 return string.Join(seperator, this.Parameters.Select(x => string.Format("{0}: {1}", x.Name, string.Format(this.model.DiConstructorFormat, x.Type))));
             }
-    }
+        }
 
         public class Parameter
         {
