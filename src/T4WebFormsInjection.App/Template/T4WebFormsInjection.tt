@@ -176,7 +176,7 @@ namespace <#= kv.Key #>
                         {
                             if (cc.ClassKind != vsCMClassKind.vsCMClassKindPartialClass)
                             {
-                                TT.Warning(string.Format("'{0}' is missing partial keyword.", cc.FullName));
+                                TT.Error(string.Format("'{0}' is missing partial keyword.", cc.FullName));
                             }
 
                             var q = ct.Members.OfType<EnvDTE.CodeFunction>()
@@ -213,6 +213,8 @@ namespace <#= kv.Key #>
 
             this.RecurseNamespace(namespaces, classes, codeNamespaces);
 
+            this.ShowDuplicateConstructorWarning(classes);
+
             var q = from n in classes
 		            group n by n.Namespace into g
 		            orderby g.Key
@@ -225,6 +227,23 @@ namespace <#= kv.Key #>
 		            };
 
             return q.ToDictionary(k => k.Namespace, v => v.Classes.ToArray());
+        }
+
+        private void ShowDuplicateConstructorWarning(IEnumerable<ClassDetails> classes)
+        {
+            var q = from c in classes
+                    group c by new { c.Namespace, c.Name } into g
+		            where g.Count() > 1
+		            select new {
+			            g.Key.Namespace,
+			            g.Key.Name,
+                        Count = g.Count()
+		            };
+
+            foreach (var d in q)
+            {
+                TT.Warning(string.Format("{2} injectable constructors found for '{0}.{1}'.", d.Namespace, d.Name, d.Count));
+            }
         }
 
         public class ClassDetails
