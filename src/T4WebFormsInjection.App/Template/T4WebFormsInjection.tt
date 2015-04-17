@@ -34,7 +34,7 @@ Manager.tt from Damien Guard: http://damieng.com/blog/2009/11/06/multiple-output
 <#@ import namespace="EnvDTE80" #>
 <#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
 <#
-    var items = PrepareDataToRender(this);
+    var items = PrepareDataToRender(this, Host);
     var manager = Manager.Create(Host, GenerationEnvironment);
 #>
 <#    manager.StartHeader(); #>
@@ -82,12 +82,14 @@ namespace <#= kv.Key #>
 
 <#+
     static TextTransformation TT;
+    static string T4FileName;
     static Settings settings;
     static Model model;
 
-    Dictionary<string, Model.ClassDetails[]> PrepareDataToRender(TextTransformation tt)
+    Dictionary<string, Model.ClassDetails[]> PrepareDataToRender(TextTransformation tt, ITextTemplatingEngineHost host)
     {
         TT = tt;
+        T4FileName = Path.GetFileName(host.TemplateFile);
         settings = Settings.Load(Host);
 
         var visualStudio = (this.Host as IServiceProvider).GetService(typeof(DTE)) as DTE;
@@ -176,7 +178,16 @@ namespace <#= kv.Key #>
                         {
                             if (cc.ClassKind != vsCMClassKind.vsCMClassKindPartialClass)
                             {
-                                TT.Error(string.Format("'{0}' is missing partial keyword.", cc.FullName));
+                                try
+                                {
+                                    cc.ClassKind = vsCMClassKind.vsCMClassKindPartialClass;
+                                    TT.Warning(String.Format("{0} changed the class {1} to be partial", T4FileName, cc.FullName));
+                                }
+                                catch
+                                {
+                                    // If we couldn't make it partial, give a warning and skip it
+                                    TT.Error(String.Format("{0} was not able to make the class {1} partial. Please change it manually if possible", T4FileName, cc.FullName));
+                                }
                             }
 
                             var q = ct.Members.OfType<EnvDTE.CodeFunction>()
@@ -242,7 +253,7 @@ namespace <#= kv.Key #>
 
             foreach (var d in q)
             {
-                TT.Warning(string.Format("{2} injectable constructors found for '{0}.{1}'.", d.Namespace, d.Name, d.Count));
+                TT.Warning(string.Format("{0} found {1} injectable constructors for '{2}.{3}'", T4FileName, d.Count, d.Namespace, d.Name));
             }
         }
 
@@ -616,7 +627,7 @@ namespace <#= kv.Key #>
                 var item = this.ProjectItem.Collection.AddFromFile(this.SettingsFile);
                 item.Properties.Item("ItemType").Value = "None";
             } else
-                TT.Error("Cannot save settings file! " + this.SettingsFile);
+                TT.Error(string.Format("{0} cannot save settings file: {1}", T4FileName, this.SettingsFile));
         }
     }
 
