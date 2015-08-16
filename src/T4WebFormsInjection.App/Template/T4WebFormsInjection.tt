@@ -4,8 +4,9 @@ T4WebFormsInjection Version 1.0
 
 T4WebFormsInjection generates parameterless constructors for classes that extend the types in the IncludedTypes setting.
 
-The intent is to allow for dependency injection in the subclases asp.net types that are constructed via a factory. 
+The intent is to allow for dependency injection in the subclasses asp.net types that are constructed via a factory. 
 These include:
+        - System.Web.UI.MasterPage
         - System.Web.UI.Pages
         - System.Web.UI.UserControls
         - System.Web.IHttpHandler
@@ -181,12 +182,12 @@ namespace <#= kv.Key #>
                                 try
                                 {
                                     cc.ClassKind = vsCMClassKind.vsCMClassKindPartialClass;
-                                    TT.Warning(String.Format("{0} changed the class {1} to be partial", T4FileName, cc.FullName));
+                                    TT.Warning(string.Format("{0} changed the class {1} to be partial", T4FileName, cc.FullName));
                                 }
                                 catch
                                 {
                                     // If we couldn't make it partial, give a warning and skip it
-                                    TT.Error(String.Format("{0} was not able to make the class {1} partial. Please change it manually if possible", T4FileName, cc.FullName));
+                                    TT.Error(string.Format("{0} was not able to make the class {1} partial. Please change it manually if possible", T4FileName, cc.FullName));
                                 }
                             }
 
