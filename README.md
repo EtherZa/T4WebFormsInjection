@@ -3,6 +3,7 @@
 T4 WebForms Injection is a T4 template for ASP.NET WebForms that creates parameterless constructors for classes that have a dependency injectable constructor, but are created via a sealed factory.
 
 ### Targets subclasses of
+* System.Web.UI.MasterPage
 * System.Web.UI.Page
 * System.Web.UI.UserControl
 * System.Web.IHttpHandler
