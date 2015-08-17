@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="HandlerExcluded.ashx.cs" Class="T4WebFormsInjection.App.Handlers.HandlerExcluded" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="HandlerExcluded.ashx.cs" Class="T4WFI.App.Handlers.HandlerExcluded" %>

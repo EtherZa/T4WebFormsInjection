@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Settings>
   <!--String to format with the type to be instantiated.-->
-  <ContainerConstructorFormat>T4WebFormsInjection.App.Code.Container.GetInstance&lt;{0}&gt;()</ContainerConstructorFormat>
+  <ContainerConstructorFormat>T4WFI.App.Code.Container.GetInstance&lt;{0}&gt;()</ContainerConstructorFormat>
   <!--Types to generate constructors for.-->
   <IncludedTypes>
     <Type>System.Web.UI.MasterPage</Type>
@@ -15,4 +15,6 @@
   <SplitIntoMultipleFiles>False</SplitIntoMultipleFiles>
   <!--If true, the template output will include documentation for the constructor.-->
   <IncludeDocumentation>False</IncludeDocumentation>
+  <!--If true, the template output will include a registration list of all items to be injected.-->
+  <OutputRegistrationList>True</OutputRegistrationList>
 </Settings>

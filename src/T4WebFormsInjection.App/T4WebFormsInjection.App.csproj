@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>T4WebFormsInjection.App</RootNamespace>
-    <AssemblyName>T4WebFormsInjection.App</AssemblyName>
+    <RootNamespace>T4WFI.App</RootNamespace>
+    <AssemblyName>T4WFI.App</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -126,7 +126,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Template\T4WebFormsInjection.nuspec" />
     <Content Include="Settings.StyleCop" />
-    <Content Include="Template\T4WebFormsInjection.tt.settings.xml" />
+    <None Include="Template\T4WebFormsInjection.tt.settings.xml" />
     <Content Include="UserControls\UC1.ascx" />
     <Content Include="UserControls\UC2.ascx" />
     <Content Include="UserControls\UCExluded.ascx" />
@@ -196,7 +196,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>T4WebFormsInjection.tt</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\UC1.ascx.cs">
       <DependentUpon>UC1.ascx</DependentUpon>

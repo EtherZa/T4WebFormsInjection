@@ -1,7 +1,7 @@
-﻿namespace T4WebFormsInjection.App.Code
-{
-    using System;
+﻿using System;
 
+namespace T4WFI.App.Code
+{
     public static class Container
     {
         public static T GetInstance<T>()

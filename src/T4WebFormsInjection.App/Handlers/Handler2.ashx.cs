@@ -1,9 +1,8 @@
-﻿namespace T4WebFormsInjection.App.Handlers
+﻿using System.Web;
+using T4WFI.App.Code;
+
+namespace T4WFI.App.Handlers
 {
-    using System.Web;
-
-    using T4WebFormsInjection.App.Code;
-
     public partial class Handler2 : IHttpHandler
     {
         public Handler2(IDummyInterface dummyInterface, IDummyInterface2 dummyInterface2)

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4WebFormsInjection.App.UserControls
+namespace T4WFI.App.UserControls
 {
 
 

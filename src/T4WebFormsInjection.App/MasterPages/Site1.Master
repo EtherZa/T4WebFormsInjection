@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="T4WebFormsInjection.App.MasterPages.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="T4WFI.App.MasterPages.Site1" %>
 
 <!DOCTYPE html>
 

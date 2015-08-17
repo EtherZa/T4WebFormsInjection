@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormExcluded.aspx.cs" Inherits="T4WebFormsInjection.App.Pages.WebFormExcluded" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormExcluded.aspx.cs" Inherits="T4WFI.App.Pages.WebFormExcluded" %>
 
 <!DOCTYPE html>
 

@@ -1,10 +1,9 @@
-﻿namespace T4WebFormsInjection.App.Modules
+﻿using System;
+using System.Web;
+using T4WFI.App.Code;
+
+namespace T4WFI.App.Modules
 {
-    using System;
-    using System.Web;
-
-    using T4WebFormsInjection.App.Code;
-
     public partial class MyModule1 : IHttpModule
     {
         public MyModule1(IDummyInterface dummyInterface)

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4WebFormsInjection.App.Pages
+namespace T4WFI.App.Pages
 {
 
 

@@ -1,4 +1,4 @@
-﻿namespace T4WebFormsInjection.App.Code
+﻿namespace T4WFI.App.Code
 {
     public interface IDummyInterface
     {

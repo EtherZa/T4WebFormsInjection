@@ -1,1 +1,1 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UC1.ascx.cs" Inherits="T4WebFormsInjection.App.UserControls.UC1" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UC1.ascx.cs" Inherits="T4WFI.App.UserControls.UC1" %>

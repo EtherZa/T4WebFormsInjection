@@ -1,7 +1,7 @@
 ﻿using System.Web.UI;
-using T4WebFormsInjection.App.Code;
+using T4WFI.App.Code;
 
-namespace T4WebFormsInjection.App.MasterPages
+namespace T4WFI.App.MasterPages
 {
     public partial class Site1 : MasterPage
     {

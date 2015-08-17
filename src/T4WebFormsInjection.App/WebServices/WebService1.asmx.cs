@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Web.Services;
-using T4WebFormsInjection.App.Code;
+using T4WFI.App.Code;
 
-namespace T4WebFormsInjection.App.WebServices
+namespace T4WFI.App.WebServices
 {
     /// <summary>
     ///     Summary description for WebService1

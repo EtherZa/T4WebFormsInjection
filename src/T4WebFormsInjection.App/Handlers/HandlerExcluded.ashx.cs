@@ -1,7 +1,7 @@
-﻿namespace T4WebFormsInjection.App.Handlers
-{
-    using System.Web;
+﻿using System.Web;
 
+namespace T4WFI.App.Handlers
+{
     /// <summary>
     /// Summary description for HandlerExcluded
     /// </summary>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4WebFormsInjection.App.MasterPages {
+namespace T4WFI.App.MasterPages {
     
     
     public partial class Site1 {

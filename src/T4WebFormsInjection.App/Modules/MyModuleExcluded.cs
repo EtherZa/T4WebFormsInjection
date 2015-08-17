@@ -1,8 +1,8 @@
-﻿namespace T4WebFormsInjection.App.Modules
-{
-    using System;
-    using System.Web;
+﻿using System;
+using System.Web;
 
+namespace T4WFI.App.Modules
+{
     public class MyModuleExcluded : IHttpModule
     {
         public void OnLogRequest(object source, EventArgs e)
