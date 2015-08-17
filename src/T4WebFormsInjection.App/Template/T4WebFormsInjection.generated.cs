@@ -65,4 +65,19 @@ namespace T4WebFormsInjection.App.UserControls
     }
 }
 
+namespace T4WebFormsInjection.App.WebServices
+{
+    using System;
+
+    public partial class WebService1
+    {
+        [Obsolete("Use T4WebFormsInjection.App.WebServices.T4WebFormsInjection.App.WebServices(dummyInterface, dummyInterface2) instead.")]
+        public WebService1()
+            : this(dummyInterface: T4WebFormsInjection.App.Code.Container.GetInstance<T4WebFormsInjection.App.Code.IDummyInterface>(),
+                   dummyInterface2: T4WebFormsInjection.App.Code.Container.GetInstance<T4WebFormsInjection.App.Code.IDummyInterface2>())
+        {
+        }
+    }
+}
+
 

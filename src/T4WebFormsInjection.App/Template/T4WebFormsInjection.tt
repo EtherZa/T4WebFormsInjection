@@ -11,6 +11,7 @@ These include:
         - System.Web.UI.UserControls
         - System.Web.IHttpHandler
         - System.Web.IHttpModule
+		- System.Web.Services.WebService
 
 Settings code has been harvested from T4MVC MvcSettings (https://github.com/T4MVC/T4MVC) [Licence: Apache 2.0]
 Manager.tt from Damien Guard: http://damieng.com/blog/2009/11/06/multiple-outputs-from-t4-made-easy-revisited
@@ -315,7 +316,8 @@ namespace <#= kv.Key #>
                 "System.Web.UI.Page",
                 "System.Web.UI.UserControl",
                 "System.Web.IHttpHandler",
-                "System.Web.IHttpModule"
+                "System.Web.IHttpModule",
+                "System.Web.Services.WebService"
                 }, "Type");
             this.SplitIntoMultipleFiles = false;
             this.IncludeDocumentation = false;

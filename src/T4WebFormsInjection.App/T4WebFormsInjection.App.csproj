@@ -136,6 +136,7 @@
       <LastGenOutput>T4WebFormsInjection.generated.cs</LastGenOutput>
     </Content>
     <Content Include="MasterPages\Site1.Master" />
+    <Content Include="WebServices\WebService1.asmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -217,6 +218,10 @@
     </Compile>
     <Compile Include="UserControls\UCExluded.ascx.designer.cs">
       <DependentUpon>UCExluded.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
