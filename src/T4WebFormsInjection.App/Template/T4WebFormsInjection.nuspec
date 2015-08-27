@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>T4WebFormsInjection</id>
-    <version>1.4</version>
+    <version>1.5</version>
     <authors>Richard Pringle</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>T4WebFormsInjection is a T4 template that generates parameterless constructors for poor man's dependency injection.</description>
