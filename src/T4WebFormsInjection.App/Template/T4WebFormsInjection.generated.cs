@@ -20,6 +20,30 @@ namespace T4WFI.App
 	}
 }
 
+namespace T4WFI.App.Handlers
+{
+    using System;
+
+    public partial class Handler1
+    {
+        [Obsolete("Use T4WFI.App.Handlers.Handler1(dummyInterface) instead.")]
+        public Handler1()
+            : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>())
+        {
+        }
+    }
+
+    public partial class Handler2
+    {
+        [Obsolete("Use T4WFI.App.Handlers.Handler2(dummyInterface, dummyInterface2) instead.")]
+        public Handler2()
+            : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>(),
+                   dummyInterface2: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface2>())
+        {
+        }
+    }
+}
+
 namespace T4WFI.App.MasterPages
 {
     using System;
@@ -29,6 +53,30 @@ namespace T4WFI.App.MasterPages
         [Obsolete("Use T4WFI.App.MasterPages.Site1(dummyInterface) instead.")]
         public Site1()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>())
+        {
+        }
+    }
+}
+
+namespace T4WFI.App.Modules
+{
+    using System;
+
+    public partial class MyModule1
+    {
+        [Obsolete("Use T4WFI.App.Modules.MyModule1(dummyInterface) instead.")]
+        public MyModule1()
+            : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>())
+        {
+        }
+    }
+
+    public partial class MyModule2
+    {
+        [Obsolete("Use T4WFI.App.Modules.MyModule2(dummyInterface, dummyInterface2) instead.")]
+        public MyModule2()
+            : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>(),
+                   dummyInterface2: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface2>())
         {
         }
     }

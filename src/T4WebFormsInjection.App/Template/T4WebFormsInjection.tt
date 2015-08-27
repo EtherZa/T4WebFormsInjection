@@ -206,7 +206,7 @@ namespace <#= kv.Key #>
                 this.RecurseNamespace(filter, classes, ns.Members.OfType<EnvDTE.CodeNamespace>().Where(cn => filter.Any(x => x.StartsWith(cn.FullName))));
 
                 var items = ns.Members.OfType<EnvDTE80.CodeClass2>()
-                    .Where(x => this.baseClass.Any(c => x.get_IsDerivedFrom(c)));
+                    .Where(x => this.baseClass.Any(c => x.IsDerivedFrom[c]) || x.ImplementedInterfaces.Cast<CodeInterface>().Any(ci => this.baseClass.Any(c => ci.IsDerivedFrom[c])));
                 
                 foreach(var cc in items)
                 {
