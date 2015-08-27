@@ -335,7 +335,7 @@ namespace <#= kv.Key #>
             {
                 get
                 {
-                    return string.Format("{0}.{1}({2})", this.Namespace, this.Namespace, string.Join(", ", this.Parameters.Select(x => x.Name)));
+                    return string.Format("{0}.{1}({2})", this.Namespace, this.Name, string.Join(", ", this.Parameters.Select(x => x.Name)));
                 }
             }
 

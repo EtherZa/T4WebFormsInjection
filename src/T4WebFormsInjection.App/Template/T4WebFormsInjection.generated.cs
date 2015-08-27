@@ -26,7 +26,7 @@ namespace T4WFI.App.MasterPages
 
     public partial class Site1
     {
-        [Obsolete("Use T4WFI.App.MasterPages.T4WFI.App.MasterPages(dummyInterface) instead.")]
+        [Obsolete("Use T4WFI.App.MasterPages.Site1(dummyInterface) instead.")]
         public Site1()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>())
         {
@@ -40,7 +40,7 @@ namespace T4WFI.App.Pages
 
     public partial class WebForm1
     {
-        [Obsolete("Use T4WFI.App.Pages.T4WFI.App.Pages(dummyInterface, dummyInterfaceFromPartial) instead.")]
+        [Obsolete("Use T4WFI.App.Pages.WebForm1(dummyInterface, dummyInterfaceFromPartial) instead.")]
         public WebForm1()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>(),
                    dummyInterfaceFromPartial: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>())
@@ -50,7 +50,7 @@ namespace T4WFI.App.Pages
 
     public partial class WebForm2
     {
-        [Obsolete("Use T4WFI.App.Pages.T4WFI.App.Pages(dummyInterface, dummyInterface2) instead.")]
+        [Obsolete("Use T4WFI.App.Pages.WebForm2(dummyInterface, dummyInterface2) instead.")]
         public WebForm2()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>(),
                    dummyInterface2: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface2>())
@@ -65,7 +65,7 @@ namespace T4WFI.App.UserControls
 
     public partial class UC1
     {
-        [Obsolete("Use T4WFI.App.UserControls.T4WFI.App.UserControls(dummyInterface) instead.")]
+        [Obsolete("Use T4WFI.App.UserControls.UC1(dummyInterface) instead.")]
         public UC1()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>())
         {
@@ -74,7 +74,7 @@ namespace T4WFI.App.UserControls
 
     public partial class UC2
     {
-        [Obsolete("Use T4WFI.App.UserControls.T4WFI.App.UserControls(dummyInterface, dummyInterface2) instead.")]
+        [Obsolete("Use T4WFI.App.UserControls.UC2(dummyInterface, dummyInterface2) instead.")]
         public UC2()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>(),
                    dummyInterface2: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface2>())
@@ -89,7 +89,7 @@ namespace T4WFI.App.WebServices
 
     public partial class WebService1
     {
-        [Obsolete("Use T4WFI.App.WebServices.T4WFI.App.WebServices(dummyInterface, dummyInterface2) instead.")]
+        [Obsolete("Use T4WFI.App.WebServices.WebService1(dummyInterface, dummyInterface2) instead.")]
         public WebService1()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>(),
                    dummyInterface2: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface2>())
