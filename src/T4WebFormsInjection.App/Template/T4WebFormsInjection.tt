@@ -1,4 +1,4 @@
-﻿<#
+<#
 /*
 T4WebFormsInjection Version 2.0
 
@@ -51,8 +51,8 @@ namespace <#= modelData.Namespace #>
 {
 <# if (settings.OutputRegistrationList) { #>
 	using System;
-	using System.Collections.Generic;
 <# } #>
+	using System.Collections.Generic;
 <# if (modelData.TrackObjectsForDisposal) { #>
 	using System.Runtime.CompilerServices;
 <# } #>
