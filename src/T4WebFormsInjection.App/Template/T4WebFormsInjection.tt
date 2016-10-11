@@ -1,6 +1,6 @@
 <#
 /*
-T4WebFormsInjection Version 2.0
+T4WebFormsInjection Version 2.0.1
 
 T4WebFormsInjection generates parameterless constructors for classes that extend the types in the IncludedTypes setting.
 
