@@ -16,7 +16,7 @@ T4 WebForms Injection is a T4 template for ASP.NET WebForms that creates paramet
 * Every parameter in the constructor will be injected
 
 ### Steps to install/configure
-* **Install** T4MVC in your MVC app using [NuGet](https://www.nuget.org/packages/T4WebFormsInjection/)
+* **Install** T4WebFormsInjection in your app using [NuGet](https://www.nuget.org/packages/T4WebFormsInjection/)
 * **Edit** the [configuration file](https://github.com/EtherZa/T4WebFormsInjection/wiki/Configuration)
 * **Run custom tool** to generate the template
 
