@@ -1,12 +1,10 @@
-﻿using System.ComponentModel;
-using System.Web.Services;
-using T4WFI.App.Code;
-
-namespace T4WFI.App.WebServices
+﻿namespace T4WFI.App.WebServices
 {
-    /// <summary>
-    ///     Summary description for WebService1
-    /// </summary>
+    using System.ComponentModel;
+    using System.Web.Services;
+
+    using T4WFI.App.Code;
+
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [ToolboxItem(false)]

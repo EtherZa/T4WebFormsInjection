@@ -94,7 +94,6 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\Site.css" />
     <Content Include="Handlers\Handler1.ashx" />
@@ -131,12 +130,10 @@
     <Content Include="Template\T4WebFormsInjection.nuspec" />
     <Content Include="Settings.StyleCop" />
     <Content Include="packages.config" />
-    <Content Include="Site.Mobile.Master" />
     <None Include="Template\T4WebFormsInjection.tt.settings.xml" />
     <Content Include="UserControls\UC1.ascx" />
     <Content Include="UserControls\UC2.ascx" />
     <Content Include="UserControls\UCExluded.ascx" />
-    <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Template\T4WebFormsInjection.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -200,13 +197,6 @@
       <DependentUpon>WebFormExcluded.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
     <Compile Include="Template\T4WebFormsInjection.generated.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,13 +222,6 @@
     </Compile>
     <Compile Include="UserControls\UCExluded.ascx.designer.cs">
       <DependentUpon>UCExluded.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
     <Compile Include="WebServices\WebService1.asmx.cs">
       <DependentUpon>WebService1.asmx</DependentUpon>

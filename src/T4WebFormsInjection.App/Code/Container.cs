@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace T4WFI.App.Code
+﻿namespace T4WFI.App.Code
 {
+    using System;
+
     public static class Container
     {
         public static T GetInstance<T>()

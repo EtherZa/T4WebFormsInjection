@@ -1,19 +1,10 @@
-﻿using System.Web;
-
-namespace T4WFI.App.Handlers
+﻿namespace T4WFI.App.Handlers
 {
-    /// <summary>
-    /// Summary description for HandlerExcluded
-    /// </summary>
+    using System.Web;
+
     public class HandlerExcluded : IHttpHandler
     {
-        public bool IsReusable
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public bool IsReusable => false;
 
         public void ProcessRequest(HttpContext context)
         {
