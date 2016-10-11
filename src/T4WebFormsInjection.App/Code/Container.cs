@@ -1,12 +1,19 @@
 ﻿namespace T4WFI.App.Code
 {
-    using System;
-
     public static class Container
     {
+        static Container()
+        {
+            Container.SyncRoot = new object();
+        }
+
+        public static object SyncRoot { get; }
+
+        public static IContainer Instance { get; set; }
+
         public static T GetInstance<T>()
         {
-            throw new NotImplementedException();
+            return Container.Instance.GetInstance<T>();
         }
     }
 }

@@ -91,7 +91,7 @@ namespace T4WFI.App.Pages
         [Obsolete("Use T4WFI.App.Pages.WebForm1(dummyInterface, dummyInterfaceFromPartial) instead.")]
         public WebForm1()
             : this(dummyInterface: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>(),
-                   dummyInterfaceFromPartial: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface>())
+                   dummyInterfaceFromPartial: T4WFI.App.Code.Container.GetInstance<T4WFI.App.Code.IDummyInterface2>())
         {
         }
     }

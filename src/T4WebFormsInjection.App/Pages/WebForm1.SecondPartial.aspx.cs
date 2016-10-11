@@ -4,7 +4,7 @@
 
     public partial class WebForm1
     {
-        public WebForm1(IDummyInterface dummyInterface, IDummyInterface dummyInterfaceFromPartial)
+        public WebForm1(IDummyInterface dummyInterface, IDummyInterface2 dummyInterfaceFromPartial)
         {
         }
     }

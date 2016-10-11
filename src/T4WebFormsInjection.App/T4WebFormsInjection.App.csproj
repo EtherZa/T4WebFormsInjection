@@ -128,7 +128,6 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Template\T4WebFormsInjection.nuspec" />
-    <Content Include="Settings.StyleCop" />
     <Content Include="packages.config" />
     <None Include="Template\T4WebFormsInjection.tt.settings.xml" />
     <Content Include="UserControls\UC1.ascx" />
@@ -151,6 +150,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Code\Container.cs" />
+    <Compile Include="Code\IContainer.cs" />
     <Compile Include="Code\IDummyInterface.cs" />
     <Compile Include="Code\IDummyInterface2.cs" />
     <Compile Include="Handlers\Handler1.ashx.cs">
