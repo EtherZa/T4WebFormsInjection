@@ -2,11 +2,11 @@
 <package>
   <metadata>
     <id>T4WebFormsInjection</id>
-    <version>1.5</version>
+    <version>2.0</version>
     <authors>Richard Pringle</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>T4WebFormsInjection is a T4 template that generates parameterless constructors for poor man's dependency injection.</description>
-    <summary>T4WebFormsInjection is a T4 template that generates C# parameterless constructors implementing poor man's dependency injection for asp.net factory constructed classes ie. System.Web.UI.MasterPage, System.Web.UI.Page, System.Web.UI.UserControl, System.Web.IHttpHandler and System.Web.IHttpModule.</summary>
+    <description>T4WebFormsInjection is a T4 template that generates parameterless constructors to be used with constructor injection.</description>
+    <summary>T4WebFormsInjection is a T4 template that generates C# parameterless constructors implementing dependency/constructor injection for asp.net factory constructed classes ie. System.Web.UI.MasterPage, System.Web.UI.Page, System.Web.UI.UserControl, System.Web.IHttpHandler and System.Web.IHttpModule. Releasing of injected objects requires .net 4 or above.</summary>
     <language>en-ZA</language>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/EtherZa/T4WebFormsInjection</projectUrl>

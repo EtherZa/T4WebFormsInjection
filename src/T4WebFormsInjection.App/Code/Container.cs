@@ -12,8 +12,14 @@
         public static IContainer Instance { get; set; }
 
         public static T GetInstance<T>()
+            where T : class
         {
             return Container.Instance.GetInstance<T>();
+        }
+
+        public static void Release(object o)
+        {
+            Container.Instance.Release(o);
         }
     }
 }

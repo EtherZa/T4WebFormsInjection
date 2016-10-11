@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyTrackerTests.cs" />
     <Compile Include="Handlers\Handler2Tests.cs" />
     <Compile Include="Helper\Dependency.cs" />
     <Compile Include="Helper\Target.cs" />

@@ -2,6 +2,8 @@
 <Settings>
   <!--String to format with the type to be instantiated.-->
   <ContainerConstructorFormat>T4WFI.App.Code.Container.GetInstance&lt;{0}&gt;()</ContainerConstructorFormat>
+  <!--String to format the release of an instantiated object.-->
+  <ContainerReleaseFormat>T4WFI.App.Code.Container.Release({0})</ContainerReleaseFormat>
   <!--Types to generate constructors for.-->
   <IncludedTypes>
     <Type>System.Web.UI.MasterPage</Type>
@@ -14,7 +16,7 @@
   <!--If true, the template output will be split into multiple files.-->
   <SplitIntoMultipleFiles>False</SplitIntoMultipleFiles>
   <!--If true, the template output will include documentation for the constructor.-->
-  <IncludeDocumentation>False</IncludeDocumentation>
+  <IncludeDocumentation>True</IncludeDocumentation>
   <!--If true, the template output will include a registration list of all items to be injected.-->
   <OutputRegistrationList>True</OutputRegistrationList>
 </Settings>

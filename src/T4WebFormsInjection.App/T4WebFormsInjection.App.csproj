@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
     <Content Include="Handlers\Handler1.ashx" />
     <Content Include="Handlers\Handler2.ashx" />
     <Content Include="Handlers\HandlerExcluded.ashx" />
@@ -148,11 +149,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Code\Container.cs" />
     <Compile Include="Code\IContainer.cs" />
     <Compile Include="Code\IDummyInterface.cs" />
     <Compile Include="Code\IDummyInterface2.cs" />
+    <Compile Include="Code\Pseudo\PseudoContainer.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\Handler1.ashx.cs">
       <DependentUpon>Handler1.ashx</DependentUpon>
     </Compile>

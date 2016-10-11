@@ -2,6 +2,8 @@
 {
     public interface IContainer
     {
-        T GetInstance<T>();
+        T GetInstance<T>() where T : class;
+
+        void Release(object o);
     }
 }
