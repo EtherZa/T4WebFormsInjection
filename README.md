@@ -12,7 +12,7 @@ T4 WebForms Injection is a T4 template for ASP.NET WebForms that creates paramet
 
 ### Requirements
 * The target class must be partial
-* No parameterless constructor can already exist (a compiler error will be thrown if one already exist)
+* No parameterless constructor can already exist (a compiler error will be thrown if one already exists)
 * Every parameter in the constructor will be injected
 
 ### Steps to install/configure
