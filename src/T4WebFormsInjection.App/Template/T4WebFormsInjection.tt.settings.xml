@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Settings>
-  <!--String to format with the type to be instantiated.-->
-  <ContainerConstructorFormat>T4WFI.App.Code.Container.GetInstance&lt;{0}&gt;()</ContainerConstructorFormat>
-  <!--String to format the release of an instantiated object.-->
-  <ContainerReleaseFormat>T4WFI.App.Code.Container.Release({0})</ContainerReleaseFormat>
+  <!--Name of public type inheriting $RootNamespace$.T4WebFormsInjection.IScopedContainer.-->
+  <ContainerType>T4WFI.App.T4WebFormsInjectionScopedContainer</ContainerType>
   <!--Types to generate constructors for.-->
   <IncludedTypes>
     <Type>System.Web.UI.MasterPage</Type>
@@ -18,5 +16,5 @@
   <!--If true, the template output will include documentation for the constructor.-->
   <IncludeDocumentation>True</IncludeDocumentation>
   <!--If true, the template output will include a registration list of all items to be injected.-->
-  <OutputRegistrationList>True</OutputRegistrationList>
+  <OutputRegistrationList>False</OutputRegistrationList>
 </Settings>

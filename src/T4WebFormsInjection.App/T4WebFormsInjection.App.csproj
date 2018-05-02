@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,7 +132,8 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Template\T4WebFormsInjection.tt.settings.xml" />
+    <None Include="Template\T4WebFormsInjection.DependencyTracker.cs.pp" />
+    <Content Include="Template\T4WebFormsInjection.tt.settings.xml" />
     <Content Include="UserControls\UC1.ascx" />
     <Content Include="UserControls\UC2.ascx" />
     <Content Include="UserControls\UCExluded.ascx" />
@@ -152,6 +154,7 @@
   <ItemGroup>
     <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="T4WebFormsInjectionScopedContainer.cs" />
     <Compile Include="Code\Container.cs" />
     <Compile Include="Code\IContainer.cs" />
     <Compile Include="Code\IDummyInterface.cs" />

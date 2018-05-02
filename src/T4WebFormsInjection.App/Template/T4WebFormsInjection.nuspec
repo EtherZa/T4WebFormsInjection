@@ -1,20 +1,23 @@
-﻿<?xml version="1.0"?>
-<package>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>T4WebFormsInjection</id>
-    <version>2.0.1</version>
+    <version>3.0.0</version>
     <authors>Richard Pringle</authors>
+    <owners>Richard Pringle</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>T4WebFormsInjection is a T4 template that generates parameterless constructors to be used with constructor injection.</description>
-    <summary>T4WebFormsInjection is a T4 template that generates C# parameterless constructors implementing dependency/constructor injection for asp.net factory constructed classes ie. System.Web.UI.MasterPage, System.Web.UI.Page, System.Web.UI.UserControl, System.Web.IHttpHandler and System.Web.IHttpModule. Releasing of injected objects requires .net 4 or above.</summary>
-    <language>en-ZA</language>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/EtherZa/T4WebFormsInjection</projectUrl>
+    <description>T4WebFormsInjection is a T4 template that generates parameterless constructors to be used with constructor injection.</description>
+    <summary>T4WebFormsInjection is a T4 template that generates C# parameterless constructors implementing dependency/constructor injection for asp.net factory constructed classes ie. System.Web.UI.MasterPage, System.Web.UI.Page, System.Web.UI.UserControl, System.Web.IHttpHandler and System.Web.IHttpModule. Releasing of injected objects requires .net 4 or above.</summary>
+    <releaseNotes>Breaking change:
+An instance of Namespace.T4WebFormsInjection.IScopedContainer needs to be supplied to handle resolution and disposal of services.</releaseNotes>
+    <language>en-AU</language>
     <tags>t4 webforms t4webformsinjection dependency injection ioc</tags>
-    <dependencies />
   </metadata>
   <files>
-    <file src="T4WebFormsInjection.tt" target="Content" />
-    <file src="install.ps1" target="tools" />
+    <file src="T4WebFormsInjection.DependencyTracker.cs.pp" target="Content\T4WebFormsInjection.DependencyTracker.cs.pp" />
+    <file src="T4WebFormsInjection.tt" target="Content\T4WebFormsInjection.tt" />
+    <file src="install.ps1" target="tools\install.ps1" />
   </files>
 </package>
